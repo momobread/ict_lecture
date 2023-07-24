@@ -43,17 +43,27 @@ let clothes = 0;
 let pants = false;
 let pantsShape = 0;
 //1. 연청 ,2.진청, 3.검은반바지,4. 청반바지
+let pantsShapeDetail = "";
+
 let skirt = false;
 let skirtShape = 0;
 //1.쉬폰 2.숏 3.롱 
+let skirtShapeDetail = "";
+
 let slacks = false;
-let slacksColor = 0;
+let slacksShapeDetail=0;
+//1.검정슬랙스 2.쥐색슬랙스 3.베이지색슬랙스
+
+let slacksColor = "";
  //1.검정색 2.쥐색 3.베이지색
 let cagopants  =false;
 let cagoPantsColor=0;
 //1.카키 , 2.검정, 3.그레이
 
-
+let topClothes = "";
+//다음날이 되었으니 초기화해야할것을 생각해야함
+//
+    stress="fine";
 //a.(moring)
 //1.아침이 되엇는데 계속 졸리다면
     //좀 더 누워있는다
@@ -169,26 +179,14 @@ if(wash== true){
 
                 //청순한 옷을 입고싶다면
                     //치마 종류를 생각해본다
-                        //쉬폰느낌의 치마를 입고싶다면
-                            //어떤 색깔을 입을지 생각해본다
-                                //검정색을 입고싶다면
-                                    //검정색의 크롭티를 입는다
-                                //흰색을 입고싶다면
-                                    //흰색 블라우스를 입는다
-                        //숏스커트를 입고싶다면
-                            //어떤색깔을 입을지 생각해본다
-                                //청색을 입거싶거나 흰색을 입고 싶다면
-                                    //흰색 블라우스를 입는다
-                                //검은색을 입고 싶다면
-                                    //검정 크롭티를 입는다
-                        //롱스커트를 입고싶다면
-                            //어떤색깔을 입을지 생각해본다
-                                //검정색을 입고 싶다면
-                                    //흰색블라우스를 입는다
-                                //흰색을 입고 싶다면
+                        //치마 스타일을 고민해본다
+                            //쉬폰치마를 입고싶다면
+                                //흰색 블라우스를 입는다
+                            //숏스커트를 입고싶다면
+                                //검정 크롭티를 입는다
+                            //롱스커트를 입고싶다면
                                     //오픈숄더를 입는다
-                                //갈색을 입고 싶다면
-                                    //흰색 크롭티를 입는다
+
                 //모던한 룩을 입고 싶다면
                     //어떤색깔의 슬랙스를 입을지 생각해본다
                         //검정색슬랙스를 입고싶다면
@@ -214,11 +212,83 @@ if((wash == true)&&(cosmetics==0)){
     console.log("무슨옷을 입는게 좋을까?") 
     //여기서 입력을 받을것이다
         if(clothes ==1){
-            
-        }else if(clothes==2){
-
-        }
+            console.log("오늘은 편안한 옷을 입어야겠다");
+            console.log("바지를 입어야겠다!");
+            pants=true;
+            console.log("무슨색깔을 입징??");
+            //종류를 선택하게 해서 pantschape에 집어넣는다
+                if(pants){
+                    if(pantsShape == 1){
+                        pantsShapeDetail ="연청"
+                        console.log(`${pantsShapeDetail}을 입어야겠군👖`);
+                        topClothes="밝은계열티";
+                        console.log(`위에는 ${topClothes} 입어야지`);
+                        console.log("옷입기 끝~💃");
+                        }
+                    else if(pantsShape==2){
+                        pantsShapeDetail ="진청"
+                        console.log(`${pantsShapeDetail}을 입어야겠군👖`);
+                        topClothes="검정티";
+                        console.log(`위에는 ${topClothes} 입어야지`);
+                        console.log("옷입기 끝~💃");
+                        }
+                    else if(3){
+                        pantsShapeDetail ="검은반바지"
+                        console.log(`${pantsShapeDetail}을 입어야겠군👖`);
+                        topClothes="크롭티";
+                        console.log(`위에는 ${topClothes} 입어야지`);
+                        console.log("옷입기 끝~💃");
+                        }
+                    else if(4){
+                        pantsShapeDetail ="청반바지"
+                        console.log(`${pantsShapeDetail}을 입어야겠군👖`);
+                        topClothes="흰색티";
+                        console.log(`위에는 ${topClothes} 입어야지`);
+                        console.log("옷입기 끝~💃");
+                        }
+                    }
+                }
+        else if(clothes==2){
+            console.log("오늘은 청순한 옷을 입어야겠다");
+            console.log("치마를 입어야겠다!");
+            skirt=true;
+            console.log("무슨치마를 입징??");
+            //종류를 선택하게 해서 skirtchape에 집어넣는다
+                if(skirt){
+                    if(skirtShape==1){
+                        skirtShapeDetail ="쉬폰치마"
+                        console.log(`${skirtShapeDetail}을 입어야겠군👗`);
+                        topClothes="흰색블라우스";
+                        console.log(`위에는 ${topClothes} 입어야지`);
+                        console.log("옷입기 끝~💃");
+                    }else if(skirtShape==2){
+                        skirtShapeDetail ="숏스커트"
+                        console.log(`${skirtShapeDetail}을 입어야겠군👗`);
+                        topClothes="검정크롭티";
+                        console.log(`위에는 ${topClothes} 입어야지`);
+                        console.log("옷입기 끝~💃");
+                    }else if(skirtShape==3){
+                        skirtShapeDetail ="롱스커트"
+                        console.log(`${skirtShapeDetail}을 입어야겠군👗`);
+                        topClothes="오픈숄더";
+                        console.log(`위에는 ${topClothes} 입어야지`);
+                        console.log("옷입기 끝~💃");
+                    }
+                }   
+            }
         else if(clothes==3){
+            console.log("모던한 룩을 입어야겠다");
+            console.log("슬랙스를 입어야겠다!");
+            slacks=true;
+            console.log("무슨 슬랙스를 입징??");
+            //종류를 선택하게 해서 slackschape에 집어넣는다
+                if(slacks){
+                    if(slacksShape==1)
+                }
+
+
+
+
 
         }
         else if(clothes==4){
@@ -305,7 +375,7 @@ if(getOutofSchool){
             }
         }
     else if(아픔){
-        console.log("택시를 타고 집에 갈것이다")
+        console.log("택시를 타고 집에 갈것이다");
     }
 }
 
