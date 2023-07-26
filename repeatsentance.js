@@ -37,7 +37,7 @@ r1.on('line', (positiveNumber) => {
     for (; tmp >0; tmp--) {
         factorialResult*=tmp; 
     }
-    console.log(factorialResult);
+    console.log(`입력하신 수의 팩토리얼의 값은 ${factorialResult} 입니다`);
 }else{
     console.log(`양수만 입력하세요`);
 }

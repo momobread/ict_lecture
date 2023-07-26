@@ -53,10 +53,10 @@ let skirtShapeDetail = "";
 let slacks = false;
 let slacksShapeDetail=0;
 //1.검정슬랙스 2.쥐색슬랙스 3.베이지색슬랙스
-
 let slacksColor = "";
  //1.검정색 2.쥐색 3.베이지색
 let cagopants  =false;
+let cagoPan
 let cagoPantsColor=0;
 //1.카키 , 2.검정, 3.그레이
 
@@ -283,9 +283,29 @@ if((wash == true)&&(cosmetics==0)){
             console.log("무슨 슬랙스를 입징??");
             //종류를 선택하게 해서 slackschape에 집어넣는다
                 if(slacks){
-                    if(slacksShape==1)
+                    if(slacksShapeDetail==1){
+                        slacksColor = "검정색"
+                        console.log(`${slacksColor}+슬랙스를 입어야겠군`);
+                        topClothes="검정색 크롭티";
+                        console.log(`위에는 ${topClothes} 입어야지`);
+                        console.log("옷입기 끝~ 💃");
+                    }else if(slacksShapeDetail==2){
+                        slacksColor = "쥐색"
+                        console.log(`${slacksColor}+슬랙스를 입어야겠군`)
+                        topClothes="흰색크롭티"
+                        console.log(`위에는 ${topClothes} 입어야지`)
+                        console.log("옷입기 끝~ 💃");                
+                    }else if(slacksShapeDetail==3){
+                        slacksColor="베이지색"
+                        console.log(`${slacksColor}+슬랙스를 입어야겠군`)
+                        topClothes = "흰색블라우스"
+                        console.log(`$위에는${topClothes}입어야징`)
+                        console.log("옷입기 끝~ 💃");               
+                    }    
                 }
-
+        else if(clothes==4){
+            c
+        }
 
 
 
