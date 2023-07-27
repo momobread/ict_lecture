@@ -1,13 +1,24 @@
-let star ="*"
-let star2 ="**"
-let spaceBlank ="   "
-let spaceBlank2 =""
-let space ="  "
+let spaceHalfBlank ="   "
 let mspace = "    "
-let starBlank=""
-// 12345
+let num = 0;
 let result=""
+let space ="  "
+let half=" "
+let bottomMiddleSpace=""
 
+const readline = require("readline");
+ const r1 = readline.createInterface({
+     input: process.stdin,
+     output: process.stdout
+ });
+
+ console.log("숫자만 입력하세요");
+ r1.on('line',(line)=>{
+    // input = line.split(' ').map(el => Number(el));
+    num=line;
+
+   
+    
 //     
 //      *
 //    *   *
@@ -16,141 +27,50 @@ let result=""
 //  *       *
 //    *   *
 //      *
+// if(num<=0){
+    
+//     break;
+// }else if(num>0){
 
-for(let i=1;i<=5;i++){
-    result+=space;
+for(let i=1;i<=num;i++){
+    result+=space;              //머리
 }
-result+="*"
+result+="*"                
 console.log(result);
 
-for(let i=1;i<=3;i++){
-    result="  "
-    if(i==3){
-        for(let j=1;j<=5;j++){
-            result+=space;
-            result +=star;
-        
-        }
-    }
-    else if(i<3){
-    for(let j=1;j<=4-i;j++){
-        result+=space
-    }
-    result+="*"
-    
-    result+=spaceBlank;
-
-    result+="*"
-
-    for(let j=4-i;j>=0;j--){
-        result+=space
-    }
-    
-    spaceBlank+=mspace;
-
-}
-
-    console.log(result);
-}
-
-
-
-console.log("--------------------------------")
-console.log("--------------------------------")
-
-result=""
-spaceBlank ="   "
-
-for(let i=1;i<=5;i++){
-    result+=space;
-}
-result+="*"
-console.log(result);
-
-for(let i=1;i<=3;i++){
-    result="  "
-    if(i==3){
-        break;
-    }
-    else if(i<3){
-    for(let j=1;j<=4-i;j++){
-        result+=space
-    }
-    result+="*"
-    
-    result+=spaceBlank;
-
-    result+="*"
-
-    for(let j=4-i;j>=0;j--){
-        result+=space
-    }
-    
-    spaceBlank+=mspace;
-
-}
-
-    console.log(result);
-}
-   
-
-console.log("=================================")
-result=""
-spaceBlank ="   "
-
-
-
-for(let i=1;i<=3;i++){
-    result="  "
-
-
-    if(i==3){
-        break;
-    }
-    else if(i<3){
-
+for(let i=1;i<num;i++){      //몸통
+    result=""
+    if(i==num-1){
+        result+=space;
         result+="*"
-
-        for(let j=1;j<4-i;j++){
-            result+=space
+        for(let j=1;j<num;j++){              //바닥
+            result +="   *";
         }
-        
-        result+="*"
-
-    result+=spaceBlank;
-
-
-    for(let j=4-i;j>=0;j--){
+      //  result+="*"
+    }
+    else if(i<num){
+    for(let j=1+i;j<=num;j++){
         result+=space
     }
+    result+="*"
     
-    spaceBlank+=mspace;
+    result+=spaceHalfBlank;
 
-}
-    result+=space
+    result+="*"
+
+    for(let j=num-i;j>0;j--){
+        result+=space
+    }
+    spaceHalfBlank+=mspace;
+    }
+
     console.log(result);
 }
 
+r1.close();
 
-for(let i=1;i<=5;i++){
-    result+=space;
-}
-result+="*"
-console.log(result);
+}).on('close',()=>process.exit());
 
 
 
 
-
-//for(let i = 1 ; i<=6;i++){
-    
-// for(let j = 6 ;j-i<=0;j--){
-    
-        
-//     oneLineResult+=space;
-
-// }
-// oneLineResult+=leftToRightUpArrow;
-
-
-// }
